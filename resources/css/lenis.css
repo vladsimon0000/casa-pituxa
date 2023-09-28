@@ -1,0 +1,60 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-kerning: normal;
+}
+
+.nav-menu__link-item__img {
+	pointer-events: none;
+}
+
+::selection {
+	background-color: #e27a3e;
+}
+
+::-moz-selection {
+	background-color: #e27a3e;
+}
+
+.footer.footer--signup,
+.footer.footer--content {
+	transform: translate3d(0, 0, 0);
+}
+
+.btn__fill {
+	pointer-events: none;
+}
+
+body .transition {
+	display: block;
+}
+
+.sun.sun--transition {
+	/* display: none; */
+}
+
+.menu__item {
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+html.w-editor .transition {
+	display: none;
+}
+
+html.lenis {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}

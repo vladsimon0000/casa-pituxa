@@ -1,0 +1,7 @@
+@import './base.css';
+@import './lenis.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
