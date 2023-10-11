@@ -1,11 +1,12 @@
-import preset from './vendor/filament/support/tailwind.config.preset'
+import theme from './resources/json/theme.json';
 
+/** @type {import('tailwindcss').Config} */
 export default {
-    presets: [preset],
-    content: [
-        './app/Filament/**/*.php',
-        './resources/views/**/*.blade.php',
-        './vendor/filament/**/*.blade.php',
-        './vendor/awcodes/filament-curator/resources/**/*.blade.php'
-    ],
+  content: [
+    "./resources/**/*.blade.php",
+    './vendor/awcodes/filament-curator/resources/**/*.blade.php', 
+  ],
+  theme: theme,
+  plugins: [],
 }
+

@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use Awcodes\Curator\CuratorPlugin;
+use Filament\FontProviders\SpatieGoogleFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -17,6 +18,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Z3d0X\FilamentFabricator\FilamentFabricatorPlugin;
 
@@ -24,6 +26,15 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
+        // $array = json_decode(DB::table('styling')->pluck('data')->first(), true);
+        // // $data = array_merge($array, ['fontFamily' => [...get_google_fonts()]]);
+        // $json = str_replace('\/', '/', json_encode($array, JSON_PRETTY_PRINT));
+
+        // file_put_contents(
+        //     resource_path() . '/json/theme.json',
+        //     $json.PHP_EOL
+        // );
+        
         return $panel
             ->default()
             ->id('admin')
@@ -60,6 +71,7 @@ class AdminPanelProvider extends PanelProvider
                 CuratorPlugin::make(),
                 FilamentFabricatorPlugin::make()
             ])
+            ->font('Inter', provider: SpatieGoogleFontProvider::class)
             ;
     }
 }

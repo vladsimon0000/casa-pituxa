@@ -1,18 +1,30 @@
-<header class="navbar">
+<nav class="z-50 flex row justify-between items-center py-2 px-16 fixed bottom-auto top-0 left-0 right-0">
 	
-	<!-- <div data-lenis-stop="" class="navbar__menu-btn navbar__menu-btn--open">
+	<a title="Menu"
+        href="_blank"
+        class="font-default self-center text-xl md:text-2xl font-extralight tracking-widest">
 		Menu
-	</div> -->
+    </a>
 
-	<a title="Home" href="/" aria-current="page" class="brand w-inline-block w--current">
+	<a title="Home" href="/" aria-current="page" class="font-logo text-2xl md:text-4xl lg:text-6xl">
 		{{ config('app.name') }}
 	</a>
+
+    <a title="book"
+        target="_blank"
+        href=""
+        href="https://reservation.dish.co/widget/hydra-552f2ae0-e536-11e9-9243-09e7439b483a" 
+        class="font-default self-center text-xl md:text-2xl font-extralight tracking-widest"
+    >
+        Reserve
+    </a>
+</nav>
 
 	<!-- <div reservation="" class="navbar__menu-btn">
 		Book
 	</div> -->
 
-	<div class="nav-menu">
+	<!-- <div class="nav-menu">
 		<div class="nav-menu__wrp">
 			<div data-lenis-start="" class="navbar__menu-btn navbar__menu-btn--close">Close</div>
 			<nav class="nav-menu__links">
@@ -167,5 +179,6 @@
 		/>
 
 		<div class="nav-menu__img__overlay"></div>
-	</div>
+	</div> 
 </header>
+-->

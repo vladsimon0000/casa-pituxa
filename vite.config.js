@@ -7,8 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css', 
                 'cropperjs/dist/cropper.css', 
-                'vendor/awcodes/filament-curator/resources/css/plugin.css', 
-                'resources/js/app.js'
+                'resources/js/app.js',
             ],
             refresh: [
                 ...refreshPaths,

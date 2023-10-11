@@ -1,4 +1,15 @@
-<div class="icon-day w-embed">
+<div style="    
+    z-index: 50;
+    width: 24px;
+    height: 24px;
+    margin-bottom: -12px;
+    position: fixed;
+    bottom: 50lvh;
+    left: 24px;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    "
+>
 	<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.8 86.8">
 		<g id="b">
 			<path

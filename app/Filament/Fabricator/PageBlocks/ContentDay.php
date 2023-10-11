@@ -4,6 +4,7 @@ namespace App\Filament\Fabricator\PageBlocks;
 
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
@@ -12,7 +13,7 @@ class ContentDay extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('content-day')
+        return Block::make('content')
             ->schema([
                 TextInput::make('title')
                 ->label('Title')
@@ -33,6 +34,10 @@ class ContentDay extends PageBlock
                 ->label('Button label')
                 ->placeholder('Button label...')
                 ->helperText('Text displayed on the button.'),
+
+            Checkbox::make('alternative')
+                ->label('Alternative image placement')
+                ->helperText('Display image on the left.'),
 
             CuratorPicker::make('image')
                 ->label('Image')

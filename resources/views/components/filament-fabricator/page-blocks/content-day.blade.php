@@ -6,58 +6,47 @@
 	'paragraph',
 	'label',
 	'image',
+	'alternative',
 ])
 
-<div class="day">
-    <section class="section section--home section--home--centred">
+<section class="min-h-[100vh] grid">
+    <div class="min-h-[32rem] my-auto flex justify-center gap-8 py-6 px-12 items-center">
 
-        @if($image)
-            <figure class="home-img__wrp home-img__wrp--section3">
+        <div class="h-full max-w-[50%] m-0 flex flex-col gap-6">
 
-                <x-curator-glider
-                    :media="$image?? '' " 
-                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 38vw, (max-width: 1279px) 360px, (max-width: 1919px) 28vw, 540px"
-                    class="home-img"
-                />
-
-                <div class="home-img__height"></div>
-
-            </figure>
-        @endif
-
-        <div slide-up="" class="h-section-content h-section-content--section3">
-
-            <h2 text-split="" class="h-section-content__h2 h-section-content__h2--section3">
-
-                <span>
-                    {{ $title ?? '' }}
-                </span>
-
-                <span class="align-right">
-                    &#x27;{{ $title_extension ?? '' }}
-                </span>
-
+            <h2 class="text-6xl">
+                <p class="text-left" style="text-align-last: right">
+                    {{ $title }}
+                </p>
             </h2>
-
-            <p class="h-section-content__p">
-                {{ $paragraph ?? '' }}
+    
+            <p class="text-center">
+                {{ $paragraph }}
             </p>
-
-            <div class="btn__wrp">
-                <a href="/menus/drinks" class="btn w-inline-block">
-
-                    <div class="btn__txt">
-                        {{$label ?? '' }}
-                    </div>
-
-                    <div class="btn__fill">
-                        <div class="btn__fill__txt">
-                            {{$label ?? '' }}
-                        </div>
-                    </div>
-
+    
+            <div>
+                <a href="/menus/drinks" class="border-primary border-2 bg-transparent text-primary rounded-lg py-2 px-6 no-underline w-inline-block">
+                    {{ $label }}
                 </a>
             </div>
         </div>
-    </section>
-</div>
+    
+        <figure 
+            class="w-[50%] h-auto relative m-0 overflow-hidden rounded-2xl shadow"
+            @class([
+                '-order-1' => $transition ?? false
+            ])
+        >
+    
+            <x-curator-glider
+                :media="$image" 
+                sizes="(max-width: 767px) 100vw, (max-width: 991px) 38vw, (max-width: 1279px) 360px, (max-width: 1919px) 28vw, 540px"
+                class="home-img "
+            />
+    
+            <div class="home-img__height"></div>
+    
+        </figure>
+    </div>
+
+</section>

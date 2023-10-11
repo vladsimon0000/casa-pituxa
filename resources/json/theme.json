@@ -1,0 +1,15 @@
+{
+    "colors": {
+        "accent": "#e27a3e",
+        "neutral": "#87777f",
+        "primary": "#0a260a",
+        "base-100": "#8f917e",
+        "secondary": "#28181e"
+    },
+    "fontFamily": {
+        "logo": ["Young Serif"],
+        "default": ["Gabarito"],
+        "paragraph": ["Mooli"],
+        "title": ["Bitter"]
+    }
+}

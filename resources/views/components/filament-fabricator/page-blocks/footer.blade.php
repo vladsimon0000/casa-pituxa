@@ -1,14 +1,13 @@
 @aware(['page'])
 
-<footer>    
 <div class="footer footer--content">
 	<div class="w-layout-grid footer__grid">
 
 		<div id="w-node-_82d7383c-f8df-4c90-60b3-ecf890e3639f-90e36379" class="footer__grid__logo-wrp">
 
-			<div class="footer__grid__logo-wrp__logo w-embed">
-				{{ config('app.name') }}
-			</div>
+            <a title="Home" href="/" aria-current="page" class="font-logo text-6xl">
+                {{ config('app.name') }}
+            </a>
 
 			<div class="social">
 
@@ -107,10 +106,9 @@
 		</div>
 	</div>
 
-	<div class="footer__copyright-wrp">
-		<div>VladSimon0000</div>
-		<!-- <div>Fern is a cashless business.</div> -->
-		<!-- <div>Site by <a href="https://smith-cordell.com" class="studio-sc">studio:sc™</a></div> -->
+	<div class="footer__copyright-wrp flex mt-10 font-medium justify-between flex-wrap gap-4">
+		<div>@ 2023 Angel & Simon</div>
+		<div>Casa Pituxa</div>
+		<div>Site by Angel & Simon</div>
 	</div>
 </div>
-</footer>

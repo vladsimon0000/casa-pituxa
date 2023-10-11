@@ -40,7 +40,4 @@ Route::get('/', function () {
         BLADE,
         ['component' => $component, 'page' => $filamentFabricatorPage]
     );
-
-    // $index = DB::table('pages')->where('slug', 'index');
-    // if ()
 });
