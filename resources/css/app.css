@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities; 
 
+@layer components {
+    .text-last-right {
+        text-align-last: right;
+    }
+}
+
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
 }

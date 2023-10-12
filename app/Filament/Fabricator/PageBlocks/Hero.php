@@ -6,6 +6,7 @@ use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
@@ -47,7 +48,17 @@ class Hero extends PageBlock
 
                 CuratorPicker::make('image')
                     ->label('Image')
-                    ->lazyLoad(false)
+                    ->lazyLoad(false),
+
+                Select::make('img_class')
+                    ->options([
+                        'object-contain' => 'Contain',
+                        'object-cover' => 'Cover',
+                        'object-fill' => 'Fill',
+                        'object-none' => 'None',
+                        'object-scale-down' => 'Scale',
+                    ])
+                    ->label('Image fit type')
             ]);
     }
 

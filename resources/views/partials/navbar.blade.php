@@ -1,12 +1,20 @@
-<nav class="z-50 flex row justify-between items-center py-2 px-16 fixed bottom-auto top-0 left-0 right-0">
+<nav 
+    class="z-50 flex row 
+        justify-between items-center 
+        lg:py-2 lg:px-16 px-4 py-1
+        fixed bottom-auto 
+        top-0 left-0 right-0
+        mb-25
+    "
+>
 	
 	<a title="Menu"
         href="_blank"
-        class="font-default self-center text-xl md:text-2xl font-extralight tracking-widest">
+        class="font-default self-center text-lg md:text-xl font-extralight tracking-widest">
 		Menu
     </a>
 
-	<a title="Home" href="/" aria-current="page" class="font-logo text-2xl md:text-4xl lg:text-6xl">
+	<a title="Home" href="/" aria-current="page" class="font-logo text-2xl md:text-4xl ">
 		{{ config('app.name') }}
 	</a>
 
@@ -14,7 +22,7 @@
         target="_blank"
         href=""
         href="https://reservation.dish.co/widget/hydra-552f2ae0-e536-11e9-9243-09e7439b483a" 
-        class="font-default self-center text-xl md:text-2xl font-extralight tracking-widest"
+        class="font-default self-center text-lg md:text-xl font-extralight tracking-widest"
     >
         Reserve
     </a>
